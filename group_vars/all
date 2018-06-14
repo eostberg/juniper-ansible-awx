@@ -1,1 +1,5 @@
 ---
+# Common settings across all Junos devices
+time_zone: Europe/Stockholm
+name_servers: 8.8.8.8
+ntp_servers: 172.30.104.10
