@@ -1,0 +1,20 @@
+---
+- name: Gather facts from Junos devices
+  hosts: all
+  connection: local
+  gather_facts: no
+  roles:
+    - Juniper.junos
+  tasks:
+    - name: Gather Junos facts with no configuration
+      juniper_junos_facts:
+
+# Print a fact
+
+# Using config_format option
+
+# Print the config
+
+# Using savedir option
+
+# Print the saved JSON file
