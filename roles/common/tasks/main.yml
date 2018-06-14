@@ -1,1 +1,13 @@
 ---
+- name: Generate common Junos config
+  template: src=main.conf.j2 dest=/etc/ansible/junos/tmp/{{ inventory_hostname }}.conf
+  tags: build
+
+- name: Configure Junos devices with common config
+  juniper_junos_config:
+    load: 'set'
+    src: "/etc/ansible/junos/tmp/{{ inventory_hostname }}.conf"
+  register: response
+- name: Print the complete response.
+  debug:
+    var: response
