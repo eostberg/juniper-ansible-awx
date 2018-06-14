@@ -4,4 +4,3 @@ time_zone: Europe/Stockholm
 name_server1: 172.30.104.10
 name_server2: 8.8.8.8
 ntp_server1: 172.30.104.10
-ntp_server2: ntp.se
