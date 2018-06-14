@@ -8,6 +8,8 @@
     load: 'set'
     src: "/tmp/{{ inventory_hostname }}.conf"
   register: response
+  tags: deploy
+  
 - name: Print the complete response.
   debug:
     var: response
