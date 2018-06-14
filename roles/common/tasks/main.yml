@@ -6,7 +6,7 @@
 - name: Configure Junos devices with common config
   juniper_junos_config:
     load: 'set'
-    src: "/etc/ansible/junos/tmp/{{ inventory_hostname }}.conf"
+    src: "/tmp/{{ inventory_hostname }}.conf"
   register: response
 - name: Print the complete response.
   debug:
