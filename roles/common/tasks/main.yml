@@ -5,11 +5,12 @@
 
 - name: Configure Junos devices with common config
   juniper_junos_config:
+    diff: true
     load: 'set'
     src: "/tmp/{{ inventory_hostname }}.conf"
-  register: response
+#  register: response
   tags: deploy
   
-- name: Print the complete response.
-  debug:
-    var: response
+#- name: Print the complete response.
+#  debug:
+#    var: response
