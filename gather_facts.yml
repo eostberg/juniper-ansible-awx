@@ -22,6 +22,7 @@
        src: /root/ansible_tmp/output/
        dest: /root/ansible_tmp/output/gather_facts.txt
        delimiter: '-----------------'
+      run_once: true 
      
     - mail:
        host: mail.smtp2go.com
