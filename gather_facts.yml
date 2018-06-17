@@ -11,15 +11,17 @@
         command: 
          - "show version"
          - "show chassis hardware"
-        dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.output"    
+        dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.output"  
         
-    - assemble: Concatenate all output files to a single text file
+    # Concatenate all output files to a single text file    
+    - assemble:
        src: /root/ansible_tmp/output/
        dest: /root/ansible_tmp/output/gather_facts.txt
        delimiter: '-----------------'
       run_once: true 
-     
-    - mail: Send an email with gather_facts attatchment
+      
+    # Send an email with gather_facts.txt attatchment
+    - mail:
        host: mail.smtp2go.com
        port: 443
        secure: always
