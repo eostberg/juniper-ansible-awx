@@ -14,4 +14,4 @@
   
 - name: Print the complete response.
   debug:
-    var: response
+    var: response.config_lines
