@@ -17,5 +17,5 @@
     
 - name: Write diff to files                                                                                
   copy:                                                                                              
-   content: "{{ response }}\n"
+   content: "{{ response.diff_lines }}\n"
    dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
