@@ -18,15 +18,15 @@
 #      debug:
 #        var: response
 #        
-    - name: Send an e-mail with output
-       mail:
-        host: mail.smtp2go.com
-        port: 443
-        secure: always
-        username: roger.wiklund@gmail.com
-        password: KIA0xiK2eo7r
-        from: ansible-awx@juniper.net
-        to: Roger Wiklund <rwiklund@juniper.net>
-        subject: Ansible-report
-        body: 'System test has been successfully provisioned.'
+    - mail
+       host: mail.smtp2go.com
+       port: 443
+       secure: always
+       username: roger.wiklund@gmail.com
+       password: KIA0xiK2eo7r
+       from: ansible-awx@juniper.net
+       to: Roger Wiklund <rwiklund@juniper.net>
+       subject: Ansible-report
+       body: 'System test has been successfully provisioned.'
       delegate_to: localhost
+      run_one: true
