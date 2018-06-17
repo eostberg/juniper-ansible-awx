@@ -10,8 +10,12 @@
     src: "/root/ansible_tmp/config/{{ inventory_hostname }}.conf"
   register: response
   tags: deploy
+  
+- name: Print config diff
+  debug:
+   var: response.diff_lines
     
 - name: Write diff to files                                                                                
   copy:                                                                                              
    content: "{{ response.diff_lines }}"
-   dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
+   dest: "/root/ansible_tmp/output/{{ inventory_hostname | to_nice_yaml }}.diff"
