@@ -33,6 +33,6 @@
        to: Roger Wiklund <rwiklund@juniper.net>
        subject: Ansible-report
        body: 'System test has been successfully provisioned.'
-       attach: /root/ansible_tmp/gather_facts.txt
+       attach: /root/ansible_tmp/output/gather_facts.txt
       delegate_to: localhost
       run_once: true
