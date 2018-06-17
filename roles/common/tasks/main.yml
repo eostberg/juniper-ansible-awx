@@ -13,7 +13,7 @@
   
 - name: Print config diff
   debug:
-   var: response.diff_lines
+   var: response
     
 - name: Write diff to files                                                                                
   copy:                                                                                              
