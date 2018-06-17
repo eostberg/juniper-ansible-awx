@@ -6,7 +6,9 @@
   roles:
     - Juniper.junos
   tasks:
-    - name: save output to dest
+    - name: Save Junos output to destination files
       juniper_junos_command:
-        command: "show version"
+        command: 
+         - "show version"
+         - "show chassis hardware"
         dest: "/tmp/{{ inventory_hostname }}.output"
