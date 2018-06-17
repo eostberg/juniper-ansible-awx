@@ -12,12 +12,12 @@
          - "show version"
          - "show chassis hardware"
         dest: "/tmp/{{ inventory_hostname }}.output"    
-      register: response
-
-    - name: Print the command output
-      debug:
-        var: response
-        
+#      register: response
+#
+#    - name: Print the command output
+#      debug:
+#        var: response
+#        
     # Sending an e-mail using SMTP2GO
     - mail:
        host: mail.smtp2go.com
