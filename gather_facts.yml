@@ -28,5 +28,6 @@
        to: Roger Wiklund <rwiklund@juniper.net>
        subject: Ansible-report
        body: 'System test has been successfully provisioned.'
+       attach: /etc/group /tmp/pavatar2.png
       delegate_to: localhost
       run_once: true
