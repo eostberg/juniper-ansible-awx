@@ -6,15 +6,7 @@
   roles:
     - Juniper.junos
   tasks:
-    - name: Gather Junos facts with no configuration
-      juniper_junos_facts:
-
-# Print a fact
-
-# Using config_format option
-
-# Print the config
-
-# Using savedir option
-
-# Print the saved JSON file
+    - name: save output to dest
+      juniper_junos_command:
+        command: "show version"
+        dest: "/tmp/{{ inventory_hostname }}.output"
