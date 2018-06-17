@@ -18,7 +18,7 @@
       debug:
         var: response
         
-    # Sending an e-mail using Gmail SMTP servers
+    # Sending an e-mail using SMTP2GO
     - mail:
        host: mail.smtp2go.com
        port: 443
