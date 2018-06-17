@@ -12,28 +12,23 @@
          - "show version"
          - "show chassis hardware"
         dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.output"    
-#      register: response
-#
-#    - name: Print the command output
-#      debug:
-#        var: response
-#        
-    - assemble:
+        
+    - assemble: Concatenate all output files to a single text file
        src: /root/ansible_tmp/output/
        dest: /root/ansible_tmp/output/gather_facts.txt
        delimiter: '-----------------'
       run_once: true 
      
-    - mail:
+    - mail: Send an email with gather_facts attatchment
        host: mail.smtp2go.com
        port: 443
        secure: always
        username: roger.wiklund@gmail.com
        password: KIA0xiK2eo7r
        from: Ansible AWX <ansible-awx@juniper.net>
-       to: Roger Wiklund <rwiklund@juniper.net>
-       subject: Ansible-report
-       body: 'System test has been successfully provisioned.'
+       to: {{ to_email }}
+       subject: Ansible AWX Gather Facts Report
+       body: 'Gather Fatcs playbook has been successfully executed.'
        attach: /root/ansible_tmp/output/gather_facts.txt
       delegate_to: localhost
       run_once: true
