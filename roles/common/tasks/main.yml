@@ -5,6 +5,7 @@
 
 - name: Configure Junos devices with common config
   juniper_junos_config:
+    timeout: 60
     diff: true
     load: 'set'
     src: "/tmp/{{ inventory_hostname }}.conf"
