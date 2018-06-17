@@ -18,5 +18,5 @@
     
 - name: Write diff to files                                                                                
   copy:                                                                                              
-   content: {{ response }} 
+   content: "{{ response }}"
    dest: "/root/ansible_tmp/output/test.txt"
