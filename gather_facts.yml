@@ -11,13 +11,18 @@
         command: 
          - "show version"
          - "show chassis hardware"
-        dest: "/root/ansible_tmp/{{ inventory_hostname }}.output"    
+        dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.output"    
 #      register: response
 #
 #    - name: Print the command output
 #      debug:
 #        var: response
 #        
+    - assemble:
+     src: /root/ansible_tmp/output/
+     dest: /root/ansible_tmp/output/gather_facts.txt
+     delimiter: '-----------------'
+     
     - mail:
        host: mail.smtp2go.com
        port: 443
