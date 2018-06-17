@@ -15,5 +15,5 @@
       register: response
 
     - name: Print the command output
-      yaml:
+      debug:
         var: response
