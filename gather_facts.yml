@@ -19,9 +19,9 @@
 #        var: response
 #        
     - assemble:
-     src: /root/ansible_tmp/output/
-     dest: /root/ansible_tmp/output/gather_facts.txt
-     delimiter: '-----------------'
+       src: /root/ansible_tmp/output/
+       dest: /root/ansible_tmp/output/gather_facts.txt
+       delimiter: '-----------------'
      
     - mail:
        host: mail.smtp2go.com
