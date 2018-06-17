@@ -20,12 +20,12 @@
         
     # Sending an e-mail using Gmail SMTP servers
     - mail:
-      host: mail.smtp2go.com
-      port: 443
-      secure: always
-      username: roger.wiklund@gmail.com
-      password: KIA0xiK2eo7r
-      to: Roger Wiklund <rwiklund@juniper.net>
-      subject: Ansible-report
-      body: 'System test has been successfully provisioned.'
-    delegate_to: localhost
+       host: mail.smtp2go.com
+       port: 443
+       secure: always
+       username: roger.wiklund@gmail.com
+       password: KIA0xiK2eo7r
+       to: Roger Wiklund <rwiklund@juniper.net>
+       subject: Ansible-report
+       body: 'System test has been successfully provisioned.'
+      delegate_to: localhost
