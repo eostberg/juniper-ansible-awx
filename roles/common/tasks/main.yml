@@ -10,10 +10,6 @@
     src: "/root/ansible_tmp/config/{{ inventory_hostname }}.conf"
   register: response
   tags: deploy
-  
-- name: Print the complete response.
-  debug:
-    var: response
     
 - name: Write diff to files                                                                                
   copy:                                                                                              
