@@ -28,7 +28,7 @@
        username: roger.wiklund@gmail.com
        password: KIA0xiK2eo7r
        from: Ansible AWX <ansible-awx@juniper.net>
-       to: rwiklund@juniper.net
+       to: '{{ to_email }}'
        subject: Ansible AWX Gather Facts Report
        body: 'Gather Fatcs playbook has been successfully executed.'
        attach: /root/ansible_tmp/output/gather_facts.txt
