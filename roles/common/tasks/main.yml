@@ -14,4 +14,9 @@
   
 - name: Print the complete response.
   debug:
-    var: response.config_lines
+    var: response
+    
+- name: Write diff to files                                                                                
+  copy:                                                                                              
+   content: "{{response.stdout}}" 
+   dest: "/root/ansible_tmp/output/test.txt"
