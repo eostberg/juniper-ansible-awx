@@ -2,8 +2,6 @@
 - hosts: all
   connection: local
   gather_facts: no
-  vars_files:
-   - /root/crypto.yml
   roles:
     - Juniper.junos
     - common
