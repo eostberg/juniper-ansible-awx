@@ -32,7 +32,6 @@
 - name: Send notification message via Slack
   slack:
    token: '{{ slack_token }}'
-   channel: '#ansible'
    msg: 'User {{ tower_user_name }} made configuration changes - https://gist.github.com/rogerwiklund/f63549614dcd14b8fa332202ccc95515'
   delegate_to: localhost
   run_once: true
