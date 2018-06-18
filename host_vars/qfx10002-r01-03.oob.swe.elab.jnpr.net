@@ -2,22 +2,6 @@
 uplinks:
  - uplink: ae1
  - uplink: ae2
- 
-vrrp:
-# VRRP config for VLAN 10 (irb.10)
- - address: 192.168.10.2/24
-   vip: 192.168.10.1
-   group: 10
-   prio: 150
- 
-# VRRP config for VLAN 11 (irb.11) 
- - address: 192.168.11.2/24
-   vip: 192.168.11.1
-   group: 11
-   prio: 150
- 
- # VRRP config for VLAN 12 (irb.12) 
- - address: 192.168.12.2/24
-   vip: 192.168.12.1
-   group: 12
-   prio: 150
+vrrps:
+ - vrrp: x
+ - vrrp: y
