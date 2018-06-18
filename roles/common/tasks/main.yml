@@ -30,8 +30,6 @@
   run_once: true 
   
 - name: Send notification message via Slack
-  vars_files:
-   - /root/crypto.yml
   slack:
    token: '{{ slack_token }}'
    channel: '#ansible'
