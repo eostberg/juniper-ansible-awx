@@ -13,7 +13,7 @@
   
 - name: Print config diff
   debug:
-   var: "{{ response | to_nice_yaml }}"
+   var: "{{ response }} | from_json | to_nice_yaml"
     
 - name: Write diff to files                                                                                
   copy:                                                                                              
