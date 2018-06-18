@@ -17,5 +17,5 @@
     
 - name: Write diff to files                                                                                
   copy:                                                                                              
-   content: "{{ response | to_nice_json }}"
+   content: "{{ response.diff | to_nice_yaml }}"
    dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
