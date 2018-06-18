@@ -2,7 +2,7 @@ replace: vlans {
 {% for vlan in vlans %}
     {{ vlan.vlan_name }} {
         vlan-id {{ vlan.vlan_id }};
-{% if 'spine' in group_names %}
+{% if 'Spine' in group_names %}
         l3-interface irb.{{ vlan.vlan_id }};
 {% endif %}
     }
@@ -21,7 +21,7 @@ replace:            members [{% for vlan in vlans %} {{ vlan.vlan_name }}{% endf
     }
 {% endfor %}
 {% for vlan in vlans %}
-{% if 'spine' in group_names %}
+{% if 'Spine' in group_names %}
     irb {
 replace: unit {{ vlan.vlan_id }} {
             family inet {
