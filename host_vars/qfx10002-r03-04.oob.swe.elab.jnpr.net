@@ -1,1 +1,4 @@
-hej
+---
+uplinks:
+ - uplink: ae1
+ - uplink: ae2
