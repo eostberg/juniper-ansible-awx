@@ -17,7 +17,7 @@
   # Concatenate all output files to a single text file    
 - assemble:
    src: /root/ansible_tmp/output/
-   regexp: '.*diff$'
+   regexp: '(.*\.diff$)'
    dest: /root/ansible_tmp/output/junos_config_diff.txt
    delimiter: '-----------------'
   run_once: true 
