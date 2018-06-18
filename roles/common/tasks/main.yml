@@ -6,8 +6,11 @@
 - name: Configure Junos devices with common config
   juniper_junos_config:
     timeout: 60
-    load: 'set'
+    diff: true
+    retrieve: candidate
+    load: set
     src: "/root/ansible_tmp/config/{{ inventory_hostname }}.conf"
+    dest_dir: "/root/ansible_tmp/output/test1.txt'
   register: response
   tags: deploy
   
@@ -15,7 +18,7 @@
   debug:
    var: response
     
-- name: Write diff to files                                                                                
-  copy:                                                                                              
-   content: "{{ response.diff_lines | to_nice_json(indent=2) }}"
-   dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
+#- name: Write diff to files                                                                                
+#  copy:                                                                                              
+#   content: "{{ response.diff_lines | to_nice_json(indent=2) }}"
+#   dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
