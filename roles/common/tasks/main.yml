@@ -7,6 +7,7 @@
   juniper_junos_config:
     timeout: '60'
     retrieve: 'candidate'
+    diff: 'true'
     load: 'set'
     src: "/root/ansible_tmp/config/{{ inventory_hostname }}.conf"
     dest_dir: "/root/ansible_tmp/output/"
