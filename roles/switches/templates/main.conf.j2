@@ -1,1 +1,34 @@
-
+replace: vlans {
+{% for vlan in vlans %}
+    {{ vlan.vlan_name }} {
+        vlan-id {{ vlan.vlan_id }};
+{% if 'spine' in group_names %}
+        l3-interface irb.{{ vlan.vlan_id }};
+{% endif %}
+    }
+{% endfor  %}
+}
+interfaces {
+{% for uplink in uplinks %}
+    {{ uplink.uplink }} {
+        unit 0 {
+            family ethernet-switching {
+                vlan {
+replace:            members [{% for vlan in vlans %} {{ vlan.vlan_name }}{% endfor %} ];
+                }
+            }
+        }
+    }
+{% endfor %}
+{% for vlan in vlans %}
+{% if 'firewalls' in group_names %}
+    irb {
+replace: unit {{ vlan.vlan_id }} {
+            family inet {
+                address {{ vlan.l3_ip }};
+            }
+        }
+    }
+{% endif %}
+{% endfor %}
+}
