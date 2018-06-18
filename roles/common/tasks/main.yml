@@ -14,6 +14,11 @@
   register: response
   tags: deploy
   
+- lineinfile:
+   path: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
+   insertbefore: 'BOF'
+   line: '{{ inventory_hostname }}'
+  
   # Concatenate all output diffs to a single text file    
 - assemble:
    src: /root/ansible_tmp/output/
