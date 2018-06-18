@@ -29,6 +29,12 @@
    delimiter: \n
   run_once: true 
   
+- name: Run script to upload config diff to Github Gist
+  hosts: localhost
+  tasks:
+   - local_action: script /root/update.sh
+  run_once: true
+  
 - name: Send notification message via Slack
   slack:
    token: '{{ slack_token }}'
