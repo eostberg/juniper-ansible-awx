@@ -17,7 +17,7 @@
   # Insert hostname.diff in the top of each .diff
 - lineinfile:
    path: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
-   insertbefore: '\['
+   insertbefore: ''
    line: '{{ inventory_hostname }}.diff'
   
   # Concatenate all output diffs to a single text file    
