@@ -29,7 +29,7 @@ replace: unit {{ vlan.vlan_id }} {
                 address {{ address.address }} {
                     vrrp-group {{ address.group }} {
                         virtual-address {{ address.vip }};
-                        priority {{ address.priority }};
+                        priority {{ address.prio }};
                         preemept;
                         accept-data;
                     }
