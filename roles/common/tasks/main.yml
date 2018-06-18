@@ -24,6 +24,6 @@
 - assemble:
    src: /root/ansible_tmp/output/
    regexp: '(.*\.diff$)'
-   dest: /root/ansible_tmp/output/junos_config.diff
-   delimiter: '-----------------\n'
+   dest: /root/ansible_tmp/output/junos_config_diff.txt
+   delimiter: '-----------------'
   run_once: true 
