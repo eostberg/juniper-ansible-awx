@@ -25,8 +25,6 @@
        host: mail.smtp2go.com
        port: 443
        secure: always
-       username: roger.wiklund@gmail.com
-       password: KIA0xiK2eo7r
        from: Ansible AWX <ansible-awx@juniper.net>
        to: '{{ to_email }}'
        subject: Ansible AWX Gather Facts Report
