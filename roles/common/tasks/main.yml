@@ -14,7 +14,7 @@
   register: response
   tags: deploy
   
-  # Concatenate all output files to a single text file    
+  # Concatenate all output diffs to a single text file    
 - assemble:
    src: /root/ansible_tmp/output/
    regexp: '(.*\.diff$)'
