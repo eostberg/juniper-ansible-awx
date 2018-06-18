@@ -2,3 +2,8 @@
 uplinks:
  - uplink: ae1
  - uplink: ae2
+vrrp:
+ - address: 192.168.10.2/24
+ - vip: 192.168.10.1
+ - group: 1
+ - prio: 150
