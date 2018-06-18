@@ -3,19 +3,6 @@
   template: src=main.conf.j2 dest=/root/ansible_tmp/config/{{ inventory_hostname }}.conf
   tags: build
 
-#- name: Retrieve [edit system services] of current committed config.
-#  juniper_junos_config:
-#    retrieve: 'committed'
-#   filter: 'system/services'
-#    diff: true
-#    check: false
-#    commit: false
-#  register: response
-#  
-#- name: Print the resulting config lines.
-#  debug:
-#   var: response.config_lines
-
 - name: Configure Junos devices with common config
   juniper_junos_config:
     timeout: '60'
@@ -25,7 +12,3 @@
     dest_dir: "/root/ansible_tmp/output/"
   register: response
   tags: deploy
-  
-#- name: Print config diff
-#  debug:
-#   var: response
