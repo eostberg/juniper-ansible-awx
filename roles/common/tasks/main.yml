@@ -8,6 +8,7 @@
     timeout: '60'
     load: 'set'
     src: "/root/ansible_tmp/config/{{ inventory_hostname }}.conf"
+    dest_dir: "/root/ansible_tmp/output/test1.txt"
   register: response
   tags: deploy
   
