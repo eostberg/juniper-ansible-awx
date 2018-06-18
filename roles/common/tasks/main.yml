@@ -29,8 +29,8 @@
    delimiter: \n
   run_once: true 
 
-- name: return motd to registered var
-  host: local
+- name: Run script to send diff to Github Gists
+  hosts: local
   command: ./root/update.sh
   run_once: true
   
