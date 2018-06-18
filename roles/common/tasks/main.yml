@@ -18,6 +18,7 @@
 - lineinfile:
    path: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
    insertbefore: ''
+   firstmatch: yes
    line: '{{ inventory_hostname }}.diff'
   
   # Concatenate all output diffs to a single text file    
