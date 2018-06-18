@@ -13,9 +13,9 @@
   
 - name: Print config diff
   debug:
-   var: "{{ response }} | from_json | to_nice_yaml"
+   var: response
     
 - name: Write diff to files                                                                                
   copy:                                                                                              
-   content: "{{ response.diff_lines }}"
+   content: "{{ response | to_nice_json }}"
    dest: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
