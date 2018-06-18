@@ -25,11 +25,11 @@ replace:            members [{% for vlan in vlans %} {{ vlan.vlan_name }}{% endf
     irb {
 replace: unit {{ vlan.vlan_id }} {
             family inet {
-{% for vrrp in vrrps %}            
+{% for vrrp_config in vrrp %}            
                 address {{ vrrp }} {
-                    vrrp-group {{ vrrp.group }} {
-                        virtual-address {{ vrrp.vip }};
-                        priority {{ vrrp.priority }};
+                    vrrp-group {{ group }} {
+                        virtual-address {{ vip }};
+                        priority {{ priority }};
                         preemept;
                         accept-data;
                     }
