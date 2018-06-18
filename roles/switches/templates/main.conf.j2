@@ -25,7 +25,14 @@ replace:            members [{% for vlan in vlans %} {{ vlan.vlan_name }}{% endf
     irb {
 replace: unit {{ vlan.vlan_id }} {
             family inet {
-                address {{ vlan.l3_ip }};
+                address {{ vrrp.address }} {
+                    vrrp-group {{ vrrp.group }} {
+                        virtual-address {{ vrrp.vip }};
+                        priority {{ vrrp.priority }};
+                        preemept;
+                        accept-data;
+                    }
+                }    
             }
         }
     }
