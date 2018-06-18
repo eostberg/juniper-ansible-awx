@@ -24,8 +24,7 @@ replace:            members [{% for vlan in vlans %} {{ vlan.vlan_name }}{% endf
 {% if 'Spine' in group_names %}
     irb {
 replace: unit {{ vlan.vlan_id }} {
-            family inet {
-{% for address in vrrp %}            
+            family inet {           
                 address {{ vrrp.address }} {
                     vrrp-group {{ vrrp.group }} {
                         virtual-address {{ vrrp.vip }};
@@ -38,6 +37,5 @@ replace: unit {{ vlan.vlan_id }} {
         }
     }
 {% endif %}
-{% endfor %}
 {% endfor %}
 }
