@@ -28,3 +28,10 @@
    dest: /root/ansible_tmp/output/junos_config_diff.txt
    delimiter: \n
   run_once: true 
+  
+- name: Send notification message via Slack
+  slack:
+   token: '{{ slack_token }}'
+   channel: '#ansible'
+   msg: 'User USERNAME made configuration changes - https://gist.github.com/rogerwiklund/f63549614dcd14b8fa332202ccc95515'
+  delegate_to: localhost
