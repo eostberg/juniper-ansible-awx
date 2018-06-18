@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Playbook for Junos Common 
+  hosts: all
   connection: local
   gather_facts: no
   roles:
@@ -7,3 +8,13 @@
     - common
   vars_files:
    - /root/crypto.yml
+  tags: common
+  
+- name: Playbook for Junos Switches 
+  hosts: all
+  connection: local
+  gather_facts: no
+  roles:
+    - Juniper.junos
+    - switches
+  tags: switches
