@@ -29,7 +29,7 @@
    delimiter: \n
   run_once: true 
   
-- name: Run script to upload config diff to Github Gist
+- name: 'Run script to upload config diff to Github Gist'
   hosts: localhost
   tasks:
    - local_action: script /root/update.sh
