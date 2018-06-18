@@ -5,3 +5,5 @@
   roles:
     - Juniper.junos
     - common
+  vars_files:
+   - /root/crypto.yml
