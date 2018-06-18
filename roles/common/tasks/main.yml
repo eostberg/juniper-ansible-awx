@@ -17,7 +17,7 @@
   # Insert hostname.diff in the top of each .diff
 - lineinfile:
    path: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
-   insertbefore: ''
+   insertbefore: '\['
    firstmatch: yes
    line: '{{ inventory_hostname }}.diff'
   
