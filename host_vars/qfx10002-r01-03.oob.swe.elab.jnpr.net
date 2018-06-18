@@ -1,4 +1,4 @@
 ---
 uplinks:
-    - uplink: ae1
-    - uplink: ae2
+ - uplink: ae1
+ - uplink: ae2
