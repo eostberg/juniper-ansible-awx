@@ -36,3 +36,12 @@
   vars_files:
    - /root/crypto.yml  
   tags: switches
+  
+  - name: Playbook for Junos Switches 
+  hosts: all
+  connection: local
+  gather_facts: no
+  roles:
+    - Juniper.junos
+    - vlan
+  tags: vlan
