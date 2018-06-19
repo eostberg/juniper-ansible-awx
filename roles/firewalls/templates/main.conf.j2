@@ -1,1 +1,23 @@
-asdf
+{{ if group containres "Firewall" then }}
+security {
+    address-book {
+        global {
+            address {{ address_book }} {{ address_entry }};
+        }
+    }
+    policies {
+        from-zone trust to-zone untrust {
+            policy {{ policy_name }} {
+                match {
+                    source-address {{ address_book }};
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
+    }
+}
+{{ end if }}
