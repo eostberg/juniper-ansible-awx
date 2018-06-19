@@ -1,4 +1,5 @@
-{{ if group containres "Firewall" then }}
+{% if 'Firewall' in group_names %}
+{% for security in security %}
 security {
     address-book {
         global {
@@ -19,5 +20,6 @@ security {
             }
         }
     }
+{% endfor %}
 }
-{{ end if }}
+{% endif %}
