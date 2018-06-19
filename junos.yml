@@ -25,7 +25,6 @@
   vars_files:
    - /root/crypto.yml
   tags: common
-- include: notifications.yml
   
 - name: Playbook for Junos Switches and Firewalls 
   hosts: all
@@ -48,3 +47,7 @@
     - Juniper.junos
     - vlan
   tags: vlan
+  
+- name: Include a play after another play
+  import_playbook: notifications.yml
+  tags: slack_notification
