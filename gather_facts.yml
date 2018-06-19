@@ -16,6 +16,7 @@
     # Concatenate all output files to a single text file    
     - assemble:
        src: /root/ansible_tmp/output/
+       regexp: '(.*\.output$)'
        dest: /root/ansible_tmp/output/gather_facts.txt
        delimiter: '-----------------'
       run_once: true 
