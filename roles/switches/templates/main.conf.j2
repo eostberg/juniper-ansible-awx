@@ -1,3 +1,4 @@
+{% if 'Switches' in group_names %}
 replace: vlans {
 {% for vlan in vlans %}
     {{ vlan.vlan_name }} {
@@ -7,6 +8,7 @@ replace: vlans {
 {% endif %}
     }
 {% endfor  %}
+{% endif  %}
 }
 interfaces {
 {% if 'Switches' in group_names %}
