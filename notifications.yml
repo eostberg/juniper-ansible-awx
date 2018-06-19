@@ -21,11 +21,11 @@
      run_once: true 
 
   - name: Run script to send diff to Github Gists
-     local_action: 'shell sh /root/update.sh'
-     run_once: true
+    local_action: 'shell sh /root/update.sh'
+    run_once: true
   
   - name: Send notification message via Slack
-     slack:
+    slack:
       token: '{{ slack_token }}'
       msg: 'User {{ tower_user_name }} made configuration changes - https://gist.github.com/rogerwiklund/f63549614dcd14b8fa332202ccc95515'
      delegate_to: localhost
