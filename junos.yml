@@ -31,7 +31,6 @@
   roles:
     - Juniper.junos
     - switches
-    - firewalls 
   tags: sw_and_fw
   
 - name: Playbook for Junos Switches 
