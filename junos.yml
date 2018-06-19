@@ -25,7 +25,7 @@
   vars_files:
    - /root/crypto.yml
   tags: common
-  - include: notifications.yml
+- include: notifications.yml
   
 - name: Playbook for Junos Switches and Firewalls 
   hosts: all
@@ -38,7 +38,7 @@
   vars_files:
    - /root/crypto.yml  
   tags: sw_and_fw
-  - include: notifications.yml
+- include: notifications.yml
   
 - name: Playbook for Junos Switches 
   hosts: all
