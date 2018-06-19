@@ -13,7 +13,7 @@
      line: '{{ inventory_hostname }}.diff'
   
   # Concatenate all output diffs to a single text file    
-  - assemble:
+   - assemble:
      src: /root/ansible_tmp/output/
      regexp: '(.*\.diff$)'
      dest: /root/ansible_tmp/output/junos_config_diff.txt
