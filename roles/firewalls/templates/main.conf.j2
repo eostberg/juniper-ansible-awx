@@ -3,12 +3,12 @@
 security {
     address-book {
         global {
-replace:            address {{ address_book }} {{ address_entry }};
+replace:            address {{ address_book }} {{ address_book.address_entry }};
         }
     }
     policies {
         from-zone trust to-zone untrust {
-replace:            policy {{ policy_name }} {
+replace:            policy {{ address_book.policy_name }} {
                 match {
                     source-address {{ address_book }};
                     destination-address any;
