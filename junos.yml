@@ -26,16 +26,17 @@
    - /root/crypto.yml
   tags: common
   
-- name: Playbook for Junos Switches 
+- name: Playbook for Junos Switches and Firewalls 
   hosts: all
   connection: local
   gather_facts: no
   roles:
     - Juniper.junos
     - switches
+    - firewalls
   vars_files:
    - /root/crypto.yml  
-  tags: switches
+  tags: sw_and_fw
   
 - name: Playbook for Junos Switches 
   hosts: all
