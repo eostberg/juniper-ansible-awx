@@ -1,0 +1,26 @@
+---
+- name: Send Slack Notifications
+  hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+    # Concatenate all output files to a single text file    
+    - assemble:
+       src: /root/ansible_tmp/output/
+       regexp: '(.*\.output$)'
+       dest: /root/ansible_tmp/output/gather_facts.txt
+       delimiter: '-----------------'
+      run_once: true 
+      
+    # Send an email with gather_facts.txt attatchment
+    - mail:
+       host: mail.smtp2go.com
+       port: 443
+       secure: always
+       from: Ansible AWX <ansible-awx@juniper.net>
+       to: '{{ to_email }}'
+       subject: Ansible AWX Gather Facts Report
+       body: 'Gather Fatcs playbook has been successfully executed.'
+       attach: /root/ansible_tmp/output/gather_facts.txt
+      delegate_to: localhost
+      run_once: true
