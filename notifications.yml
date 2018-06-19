@@ -6,19 +6,19 @@
   tasks:
   
   # Insert hostname.diff in the top of each .diff
-- lineinfile:
-   path: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
-   insertbefore: '\['
-   firstmatch: yes
-   line: '{{ inventory_hostname }}.diff'
+   - lineinfile:
+     path: "/root/ansible_tmp/output/{{ inventory_hostname }}.diff"
+     insertbefore: '\['
+     firstmatch: yes
+     line: '{{ inventory_hostname }}.diff'
   
   # Concatenate all output diffs to a single text file    
-- assemble:
-   src: /root/ansible_tmp/output/
-   regexp: '(.*\.diff$)'
-   dest: /root/ansible_tmp/output/junos_config_diff.txt
-   delimiter: \n
-  run_once: true 
+  - assemble:
+     src: /root/ansible_tmp/output/
+     regexp: '(.*\.diff$)'
+     dest: /root/ansible_tmp/output/junos_config_diff.txt
+     delimiter: \n
+    run_once: true 
 
 - name: Run script to send diff to Github Gists
   local_action: 'shell sh /root/update.sh'
