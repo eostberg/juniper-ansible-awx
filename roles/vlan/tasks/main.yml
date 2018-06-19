@@ -1,1 +1,15 @@
-hej
+---
+- name: Generate common Junos config
+  template: src=main.conf.j2 dest=/root/ansible_tmp/config/{{ inventory_hostname }}.conf
+  tags: build
+
+- name: Configure Junos devices with common config
+  juniper_junos_config:
+    timeout: '60'
+    retrieve: 'candidate'
+    load: 'set'
+    src: "/root/ansible_tmp/config/{{ inventory_hostname }}.conf"
+    dest_dir: "/root/ansible_tmp/output/"
+    return_output: 'false'
+  register: response
+  tags: deploy
