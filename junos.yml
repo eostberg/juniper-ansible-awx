@@ -32,8 +32,7 @@
   gather_facts: no
   roles:
     - Juniper.junos
-    - switches
-    - firewalls
+    - sw_and_fw
   vars_files:
    - /root/crypto.yml  
   tags: sw_and_fw
