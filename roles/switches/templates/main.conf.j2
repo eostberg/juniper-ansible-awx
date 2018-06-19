@@ -9,6 +9,7 @@ replace: vlans {
 {% endfor  %}
 }
 interfaces {
+{% if 'Switches' in group_names %}
 {% for uplink in uplinks %}
     {{ uplink.uplink }} {
         unit 0 {
@@ -20,6 +21,7 @@ replace:            members [{% for vlan in vlans %} {{ vlan.vlan_name }}{% endf
         }
     }
 {% endfor %} 
+{% endif %}
 {% if 'Spine' in group_names %}
 {% for address in vrrp %}
     irb {
