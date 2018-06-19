@@ -3,6 +3,8 @@
   hosts: all
   connection: local
   gather_facts: no
+  vars_files:
+   - /root/crypto.yml
   tasks:
   
   # Insert hostname.diff in the top of each .diff
