@@ -21,8 +21,8 @@
      run_once: true 
 
 - name: Run script to send diff to Github Gists
-  local_action: 'shell sh /root/update.sh'
-  run_once: true
+   local_action: 'shell sh /root/update.sh'
+   run_once: true
   
 - name: Send notification message via Slack
   slack:
