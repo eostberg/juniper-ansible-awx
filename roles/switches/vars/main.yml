@@ -4,5 +4,3 @@
       vlan_id: 10
     - vlan_name: vlan11
       vlan_id: 11
-    - vlan_name: vlan12
-      vlan_id: 12
