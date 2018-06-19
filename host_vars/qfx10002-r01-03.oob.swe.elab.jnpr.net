@@ -17,7 +17,7 @@ vrrp:
    prio: 150
  
  # VRRP config for VLAN 12 (irb.12) 
- - address: 192.168.12.2/24
-   group: 12
-   vip: 192.168.12.1
-   prio: 150
+ #- address: 192.168.12.2/24
+ #  group: 12
+ #  vip: 192.168.12.1
+ #  prio: 150
