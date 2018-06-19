@@ -17,4 +17,6 @@
   roles:
     - Juniper.junos
     - switches
+  vars_files:
+   - /root/crypto.yml  
   tags: switches
