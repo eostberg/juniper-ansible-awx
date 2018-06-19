@@ -31,7 +31,7 @@ replace: unit {{ address.group }} {
                     vrrp-group {{ address.group }} {
                         virtual-address {{ address.vip }};
                         priority {{ address.prio }};                        
-                        preemept;
+                        preempt;
                         accept-data;
                     }
                 }    
