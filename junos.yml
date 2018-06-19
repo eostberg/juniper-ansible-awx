@@ -37,7 +37,6 @@
   vars_files:
    - /root/crypto.yml  
   tags: sw_and_fw
-- include: notifications.yml
   
 - name: Playbook for Junos Switches 
   hosts: all
