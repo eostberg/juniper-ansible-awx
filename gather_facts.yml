@@ -5,11 +5,11 @@
   gather_facts: no
   tasks:
    - name: remove host build temp directory
-      file: path=/root/ansible_tmp/config state=absent
-      file: path=/root/ansible_tmp/output state=absent
+     file: path=/root/ansible_tmp/config state=absent
+     file: path=/root/ansible_tmp/output state=absent
    - name: create host build temp directory
-      file: path=/root/ansible_tmp/config state=directory
-      file: path=/root/ansible_tmp/output state=directory
+     file: path=/root/ansible_tmp/config state=directory
+     file: path=/root/ansible_tmp/output state=directory
   
 - name: Gather facts from Junos devices
   hosts: all
