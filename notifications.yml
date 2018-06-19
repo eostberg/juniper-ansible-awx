@@ -18,7 +18,7 @@
      regexp: '(.*\.diff$)'
      dest: /root/ansible_tmp/output/junos_config_diff.txt
      delimiter: \n
-    run_once: true 
+     run_once: true 
 
 - name: Run script to send diff to Github Gists
   local_action: 'shell sh /root/update.sh'
