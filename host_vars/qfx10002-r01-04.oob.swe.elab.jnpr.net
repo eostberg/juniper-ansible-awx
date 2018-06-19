@@ -21,3 +21,9 @@ vrrp:
    vip: 192.168.12.1
    group: 12
    prio: 100
+   
+   # VRRP config for VLAN 13 (irb.13) 
+ - address: 192.168.13.3/24
+   group: 13
+   vip: 192.168.13.1
+   prio: 100
