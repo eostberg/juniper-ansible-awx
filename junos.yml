@@ -4,7 +4,7 @@
   connection: local
   gather_facts: no
   run_once: true
-  tag: always
+  tags: always
   tasks:
    - name: remove host config temp directory
      file: path=/root/ansible_tmp/config state=absent
