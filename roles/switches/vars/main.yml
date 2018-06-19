@@ -6,5 +6,3 @@
       vlan_id: 11
     - vlan_name: vlan12
       vlan_id: 12
-    - vlan_name: vlan13
-      vlan_id: 13
