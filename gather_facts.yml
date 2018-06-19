@@ -10,6 +10,7 @@
    - name: create host build temp directory
      file: path=/root/ansible_tmp/config state=directory
      file: path=/root/ansible_tmp/output state=directory
+   run_once: true 
   
 - name: Gather facts from Junos devices
   hosts: all
