@@ -1,7 +1,9 @@
+{% if 'Switches' in group_names %}
 replace: vlans {
 {% for vlan in vlans %}
     {{ vlan.vlan_name }} {
         vlan-id {{ vlan.vlan_id }};
+{% endif %}        
 {% if 'Spine' in group_names %}
         l3-interface irb.{{ vlan.vlan_id }};
 {% endif %}
