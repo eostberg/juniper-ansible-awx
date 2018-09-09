@@ -8,9 +8,9 @@ replace:        global {
         }
     }   
     policies {
-        from-zone trust to-zone untrust {
+replace:        from-zone trust to-zone untrust {
 {% for address_book in firewall %}        
-replace:            policy {{ address_book.policy_name }} {
+            policy {{ address_book.policy_name }} {
                 match {
                     source-address {{ address_book.address_book }};
                     destination-address any;
