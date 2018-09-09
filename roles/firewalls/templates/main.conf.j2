@@ -7,5 +7,22 @@ replace:        global {
 {% endfor %}
         }
     }
+{% endfor %}    
+    policies {
+        from-zone trust to-zone untrust {
+{% for address_book in firewall %}        
+replace:            policy {{ address_book.policy_name }} {
+                match {
+                    source-address {{ address_book.address_book }};
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
+    }
+{% endfor %}
 }
 {% endif %}
