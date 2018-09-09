@@ -1,6 +1,5 @@
 ---
 - name: Housekeeping
-  tags: [print_action]
   hosts: all
   connection: local
   gather_facts: no
