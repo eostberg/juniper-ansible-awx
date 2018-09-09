@@ -6,12 +6,12 @@ firewall:
       
     - address_book: vlan11-src
       address_entry: 192.168.11.0/24
-      policy_name: vlan11-policy
+      poliy_name: vlan11-policy
       
-    - address:book: vlan12-src
+    - address_book: vlan12-src
       address_entry: 192.168.12.0/24
       policy_name: vlan12-policy
       
-    - address:book: vlan13-src
+    - address_book: vlan13-src
       address_entry: 192.168.13.0/24
       policy_name: vlan13-policy
