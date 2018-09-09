@@ -6,8 +6,7 @@ replace:        global {
             address {{ address_book.address_book }} {{ address_book.address_entry }};
 {% endfor %}
         }
-    }
-{% endfor %}    
+    }   
     policies {
         from-zone trust to-zone untrust {
 {% for address_book in firewall %}        
