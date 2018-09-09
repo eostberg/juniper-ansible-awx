@@ -2,17 +2,17 @@
 security {
     address-book {
         global {
-{% for test in firewall %}
-replace:            address {{ address_book }} {{ address_entry }};
+{% for address_book in firewall %}
+replace:            address {{ address_book.address_book }} {{ address_book.address_entry }};
         }
     }
 {% endfor %}    
     policies {
         from-zone trust to-zone untrust {
 {% for address_book in firewall %}        
-replace:            policy {{ policy_name }} {
+replace:            policy {{ address_book.policy_name }} {
                 match {
-                    source-address {{ address_book }};
+                    source-address {{ address_book.address_book }};
                     destination-address any;
                     application any;
                 }
