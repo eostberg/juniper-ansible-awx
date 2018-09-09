@@ -1,9 +1,9 @@
 {% if 'Firewall' in group_names %}
 security {
     address-book {
-        global {
+replace:        global {
 {% for address_book in firewall %}
-replace:            address {{ address_book.address_book }} {{ address_book.address_entry }};
+            address {{ address_book.address_book }} {{ address_book.address_entry }};
 {% endfor %}
         }
     }
