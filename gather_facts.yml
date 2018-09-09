@@ -1,5 +1,6 @@
 ---
 - name: Housekeeping
+  tags: [print_action]
   hosts: all
   connection: local
   gather_facts: no
@@ -8,7 +9,6 @@
   tasks:
    - name: remove host config temp directory
      file: path=/root/ansible_tmp/config state=absent
-     changed_when: false
    - name: remove host output temp directory  
      file: path=/root/ansible_tmp/output state=absent
    - name: create host config temp directory
