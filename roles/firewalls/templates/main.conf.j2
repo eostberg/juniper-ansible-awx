@@ -3,7 +3,7 @@ security {
     address-book {
         global {
 {% for address_book in firewall %}
-replace:            address {{ address_book.address_book }} {{ address_book.address_entry }};
+replace:            address {{ address_book }} {{ address_book }};
         }
     }
 }    
