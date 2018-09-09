@@ -1,6 +1,6 @@
 ---
 - name: Housekeeping
-  hosts: all
+  hosts: none
   connection: local
   gather_facts: no
   run_once: true
