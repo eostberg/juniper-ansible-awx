@@ -15,3 +15,7 @@ firewall:
     - address_book: vlan13-src
       address_entry: 192.168.13.0/24
       policy_name: vlan13-policy
+      
+    - address_book: vlan14-src
+      address_entry: 192.168.14.0/24
+      policy_name: vlan14-policy
