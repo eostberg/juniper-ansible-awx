@@ -23,8 +23,8 @@ replace:            members [{% for vlan in vlans %} {{ vlan.vlan_name }}{% endf
 {% endfor %} 
 {% if 'Spine' in group_names %}
 {% for address in vrrp %}
-replace:    irb {
-    unit {{ address.group }} {
+    irb {
+replace:    unit {{ address.group }} {
             family inet {           
                 address {{ address.address }} {
                     vrrp-group {{ address.group }} {
