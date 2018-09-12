@@ -29,7 +29,7 @@ vrrp:
    prio: 100
    
    # VRRP config for VLAN 14 (irb.14) 
- #- address: 192.168.14.3/24
- #  group: 14
- #  vip: 192.168.14.1
- #  prio: 100
+ - address: 192.168.14.3/24
+   group: 14
+   vip: 192.168.14.1
+   prio: 100
