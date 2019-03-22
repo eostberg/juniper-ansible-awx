@@ -6,20 +6,25 @@ uplinks:
 vrrp:
 # VGA config for VLAN 10 (irb.10)
  - address: 192.168.10.2/24
+   unit: 10
    vip: 192.168.10.1
  
 # VGA config for VLAN 11 (irb.11) 
  - address: 192.168.11.2/24
+   unit: 11
    vip: 192.168.11.1
  
  # VGA config for VLAN 12 (irb.12) 
  - address: 192.168.12.2/24
+   unit: 12
    vip: 192.168.12.1
 
 # VGA config for VLAN 13 (irb.13) 
  - address: 192.168.13.2/24
+   unit: 13
    vip: 192.168.13.1
    
 # VGA config for VLAN 14 (irb.14) 
  - address: 192.168.14.2/24
+   unit: 14
    vip: 192.168.14.1
