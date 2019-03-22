@@ -1,6 +1,6 @@
 ---
 # Common settings across all Junos devices
 time_zone: Europe/Stockholm
-name_server1: 4.4.4.4
-name_server2: 5.5.5.5
-ntp_server1: 6.6.6.6
+name_server1: 1.1.1.1
+name_server2: 2.2.2.2
+ntp_server1: 3.3.3.3
