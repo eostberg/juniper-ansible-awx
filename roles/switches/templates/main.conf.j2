@@ -31,7 +31,7 @@ replace:    unit {{ address.group }} {
             virtual-gateway-accept-data;
             family inet {           
                 address {{ address.address }} {
-                    preferred
+                    preferred;
                     virtual-gateway-address {{ address.vip }};
                 }
             }    
