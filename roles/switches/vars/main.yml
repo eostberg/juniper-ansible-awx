@@ -2,11 +2,16 @@
   vlans:
     - vlan_name: vlan10
       vlan_id: 10
+      vni_id: 100010
     - vlan_name: vlan11
       vlan_id: 11
+      vni_id: 100011
     - vlan_name: vlan12
       vlan_id: 12
+      vni_id: 100012
     - vlan_name: vlan13
       vlan_id: 13
+      vni_id: 100013
     - vlan_name: vlan14
       vlan_id: 14
+      vni_id: 100014
