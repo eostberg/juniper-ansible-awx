@@ -42,7 +42,7 @@
        host: mail.smtp2go.com
        port: 443
        secure: always
-       from: Ansible AWX <ansible-awx@juniper.net>
+       from: Ansible AWX <ansible-awx@jnpr.net>
        to: '{{ to_email }}'
        subject: Ansible AWX Gather Facts Report
        body: 'Gather Fatcs playbook has been successfully executed.'
