@@ -5,6 +5,7 @@ replace: vlans {
         vlan-id {{ vlan.vlan_id }};       
 {% if 'Spine' in group_names %}
         l3-interface irb.{{ vlan.vlan_id }};
+        vxlan vni {{ vlan.vni_id }}
 {% endif %}
     }
 {% endfor  %}
@@ -25,16 +26,13 @@ replace:            members [{% for vlan in vlans %} {{ vlan.vlan_name }}{% endf
 {% for address in vrrp %}
     irb {
 replace:    unit {{ address.group }} {
+            virtual-gateway-accept-data;
             family inet {           
                 address {{ address.address }} {
-                    vrrp-group {{ address.group }} {
-                        virtual-address {{ address.vip }};
-                        priority {{ address.prio }};                        
-                        preempt;
-                        accept-data;
-                    }
-                }    
-            }
+                    preferred
+                    virtual-gateway-address {{ address.vip }};
+                }
+            }    
         }
     }
 {% endfor %}
