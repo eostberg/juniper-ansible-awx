@@ -4,32 +4,22 @@ uplinks:
  - uplink: ae2
  
 vrrp:
-# VRRP config for VLAN 10 (irb.10)
+# VGA config for VLAN 10 (irb.10)
  - address: 192.168.10.3/24
    vip: 192.168.10.1
-   group: 10
-   prio: 100
  
-# VRRP config for VLAN 11 (irb.11) 
+# VGA config for VLAN 11 (irb.11) 
  - address: 192.168.11.3/24
    vip: 192.168.11.1
-   group: 11
-   prio: 100
  
- # VRRP config for VLAN 12 (irb.12) 
+# VGA config for VLAN 12 (irb.12) 
  - address: 192.168.12.3/24
    vip: 192.168.12.1
-   group: 12
-   prio: 100
    
-   # VRRP config for VLAN 13 (irb.13) 
+# VGA config for VLAN 13 (irb.13) 
  - address: 192.168.13.3/24
    vip: 192.168.13.1
-   group: 13
-   prio: 100
    
-   # VRRP config for VLAN 14 (irb.14) 
+# VGA config for VLAN 14 (irb.14) 
  - address: 192.168.14.3/24
-   group: 14
    vip: 192.168.14.1
-   prio: 100
