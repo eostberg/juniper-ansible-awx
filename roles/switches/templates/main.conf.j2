@@ -5,7 +5,9 @@ replace: vlans {
         vlan-id {{ vlan.vlan_id }};       
 {% if 'Spine' in group_names %}
         l3-interface irb.{{ vlan.vlan_id }};
-        vxlan vni {{ vlan.vni_id }}
+        vxlan {
+            vni {{ vlan.vni_id }};
+        }
 {% endif %}
     }
 {% endfor  %}
