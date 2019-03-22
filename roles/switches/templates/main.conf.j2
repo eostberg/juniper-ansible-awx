@@ -27,7 +27,7 @@ replace:            members [{% for vlan in vlans %} {{ vlan.vlan_name }}{% endf
 {% if 'Spine' in group_names %}
 {% for address in vrrp %}
     irb {
-replace:    unit {{ address.group }} {
+replace:    unit {{ address.unit }} {
             virtual-gateway-accept-data;
             family inet {           
                 address {{ address.address }} {
