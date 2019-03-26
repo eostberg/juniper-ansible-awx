@@ -18,3 +18,6 @@
     - vlan_name: vlan15
       vlan_id: 15
       vni_id: 100015
+    - vlan_name: vlan16
+      vlan_id: 16
+      vni_id: 100016
