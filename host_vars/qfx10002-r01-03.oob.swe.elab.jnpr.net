@@ -28,3 +28,8 @@ vrrp:
  - address: 192.168.14.2/24
    unit: 14
    vip: 192.168.14.1
+   
+# VGA config for VLAN 15 (irb.15) 
+ - address: 192.168.15.2/24
+   unit: 15
+   vip: 192.168.15.1
